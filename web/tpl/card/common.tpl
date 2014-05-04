@@ -1,4 +1,4 @@
-<table style="text-align: left; width: 300px; height: 400px;" border="1" cellpadding="2" cellspacing="2">
+<table class="card" border="1" cellpadding="2" cellspacing="2">
   <tbody>
     <tr>
       <td style="vertical-align: top; height: 16px; width: 16px;" class="type"><br></td>

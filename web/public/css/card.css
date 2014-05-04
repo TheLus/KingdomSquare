@@ -1,0 +1,8 @@
+table.card {
+  text-align: left;
+  width: 300px;
+  height: 400px;
+}
+td.type.red{
+  background-color: red;
+}
