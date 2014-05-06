@@ -3,6 +3,22 @@ table.card {
   width: 300px;
   height: 400px;
 }
+
 td.type.red{
   background-color: red;
+}
+td.type.green{
+  background-color: green;
+}
+td.type.yellow{
+  background-color: yellow;
+}
+td.type.blue{
+  background-color: blue;
+}
+td.type.white{
+  background-color: gray;
+}
+td.type.black{
+  background-color: black;
 }
