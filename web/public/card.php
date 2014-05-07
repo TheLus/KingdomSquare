@@ -28,7 +28,11 @@ if($selectedNo){
     $valuesLength = count($values);
     if($valuesLength == 2){
       for($i = 0;$i < $values[1]; $i++){
-        $selectedCards[] = $values[0];
+        if(!isset($selectedCards[$values[0]])){
+          $selectedCards[$values[0]] = 1;
+        }else{
+          $selectedCards[$values[0]] += 1;
+        }
       }
     }else if($valuesLength == 1){
       $selectedCards[] = $values[0];
@@ -40,13 +44,16 @@ if($selectedNo){
 //カードデータ読み込み
 if(($fp = fopen("../../cards/set_firstset/firstset.csv", "r")) !== false && $selectedCards){
   while (($data = fgetcsv($fp, 0, "\t")) !== false){
-    if(in_array($data[0], $selectedCards)){
+    if(array_key_exists($data[0], $selectedCards)){
       $data[3] = $typeText[$data[3]];
       $data = str_replace("\n","<br>",$data);
-      $cards[] = $data;
+      for($i = 0; $i < $selectedCards[$data[0]]; $i++){
+        $cards[] = $data;
+      }
     }
   }
 }
+var_dump($cards);
 $smarty->assign("cards", $cards);
 $smarty->display('viewer.tpl');
 
