@@ -35,11 +35,14 @@ if($selectedNo){
         }
       }
     }else if($valuesLength == 1){
-      $selectedCards[] = $values[0];
+      if(!isset($selectedCards[$values[0]])){
+        $selectedCards[$values[0]] = 1;
+      }else{
+        $selectedCards[$values[0]]+= 1;
+      }
     }
   }
 }
-
 
 //カードデータ読み込み
 if(($fp = fopen("../../cards/set_firstset/firstset.csv", "r")) !== false && $selectedCards){

@@ -21,7 +21,7 @@
     </tr>
     <tr>
       <td style="vertical-align: top; height: 16px; width: 16px;" class="status" colspan="2" rowspan="1">
-        AT:{{$card[6]}} DF:{{$card[7]}} SP:{{$card[8]}}
+        AT:　{{$card[6]}}　　DF:　{{$card[7]}}　　SP:　{{$card[8]}}
       </td>
     </tr>
   </tbody>
