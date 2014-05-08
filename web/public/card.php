@@ -24,6 +24,9 @@ $typeText = array(
 $selectedCards = array();
 if($selectedNo){
   foreach($selectedNo as $value){
+    if(!is_numeric($value)){
+      continue;
+    }
     $values = explode(".", $value);
     $valuesLength = count($values);
     if($valuesLength == 2){
@@ -43,6 +46,7 @@ if($selectedNo){
     }
   }
 }
+
 
 //カードデータ読み込み
 if(($fp = fopen("../../cards/set_firstset/firstset.csv", "r")) !== false && $selectedCards){
