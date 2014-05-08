@@ -53,7 +53,6 @@ if(($fp = fopen("../../cards/set_firstset/firstset.csv", "r")) !== false && $sel
     }
   }
 }
-var_dump($cards);
 $smarty->assign("cards", $cards);
 $smarty->display('viewer.tpl');
 
